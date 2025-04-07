@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travelix Template</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img id="logoimg" src="./img/logo.png" alt="Travelix Logo">
+        <a href="#">Travelix</a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#tours">Offers</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Discover Your Next Adventure</h1>
+        <p>Explore the world with our exclusive tours.</p>
+        <a href="#tours" class="btn explore-btn">Explore Now</a>
+        <!-- New Booking Toggle Button -->
+        <button class="btn booking-toggle">Book Now</button>
+      </div>
+
+      <!-- Booking Form (Dropdown) -->
+      <div class="booking-form">
+        <div class="booking-tabs">
+          <button class="tab active" data-tab="hotels">Hotels</button>
+          <button class="tab" data-tab="car-rentals">Car Rentals</button>
+          <button class="tab" data-tab="flights">Flights</button>
+          <button class="tab" data-tab="trips">Trips</button>
+          <button class="tab" data-tab="cruises">Cruises</button>
+          <button class="tab" data-tab="activities">Activities</button>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="destination">Destination</label>
+            <input type="text" id="destination" placeholder="Enter destination" required />
+          </div>
+          <div class="form-group">
+            <label for="checkin">Check In</label>
+            <input type="date" id="checkin" required />
+          </div>
+          <div class="form-group">
+            <label for="checkout">Check Out</label>
+            <input type="date" id="checkout" required />
+          </div>
+          <div class="form-group">
+            <label for="adults">Adults</label>
+            <select id="adults">
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="children">Children</label>
+            <select id="children">
+              <option>00</option>
+              <option>01</option>
+              <option>02</option>
+            </select>
+          </div>
+          <button type="submit" class="btn search-btn">Search</button>
+        </form>
+      </div>
+    </section>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>
+        We offer unique travel experiences that combine adventure, luxury, and unforgettable moments.
+      </p>
+      <img src="./img/tokyo (1).jpg" alt="About Us Image" />
+    </div>
+  </section>
+
+  <!-- Featured Tours Section -->
+  <section id="tours" class="section">
+    <div class="container">
+      <h2>Featured Tours</h2>
+      <div class="tours-wrapper">
+        <div class="tour">
+          <img src="./img/paris.jpg" alt="Tour 1" />
+          <h3>Paris Getaway</h3>
+          <p>Experience the romance of Paris with our exclusive package.</p>
+        </div>
+        <div class="tour">
+          <img src="./img/ny.jpg" alt="Tour 2" />
+          <h3>New York City</h3>
+          <p>Discover the vibrant energy of NYC on a guided tour.</p>
+        </div>
+        <div class="tour">
+          <img src="./img/ny.jpg" alt="Tour 3" />
+          <h3>Tokyo Highlights</h3>
+          <p>Explore the culture and cuisine of Tokyo like never before.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p> 2025 Travelix. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle navigation menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Toggle booking form dropdown
+    const bookingToggle = document.querySelector('.booking-toggle');
+    const bookingForm = document.querySelector('.booking-form');
+    bookingToggle.addEventListener('click', () => {
+      bookingForm.classList.toggle('active');
+    });
+
+    // Simple tab switching for booking form
+  
+    
+  </script>
+</body>
+</html>
