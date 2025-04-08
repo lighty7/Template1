@@ -238,24 +238,63 @@
     border-radius: 5px;
   }
   
-  /* Featured Tours Section */
-  .tours-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .tour {
-    flex: 1 1 calc(33.333% - 20px);
-    margin: 10px;
-    text-align: center;
-  }
-  
-  .tour img {
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
+ /* Featured Tours Section */
+/* Featured Tours Section */
+#tours3 {
+  text-align: center;
+  padding: 30px 50px;
+  background-color: #f9f9f9;
+}
+
+#tours3 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.tours-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.tour {
+  flex: 1 1 calc(33.333% - 20px);
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.tour .overlay {
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent); */
+  color: white;
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+}
+
+.tour h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.tour p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
   
   /* Testimonials Section */
   .testimonials-wrapper {
@@ -365,8 +404,9 @@
       flex-wrap: wrap;
       justify-content: center;
     }
-    .tour {
-      flex: 1 1 calc(50% - 20px);
+    .tours-wrapper {
+      /* flex: 1 1 calc(50% - 20px); */
+      flex-direction: column;
     }
     .testimonials-wrapper .testimonial {
       flex: 1 1 100%;
